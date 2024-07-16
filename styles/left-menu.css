@@ -1,0 +1,21 @@
+
+
+.left-menu .left-menu-nav li {
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+.left-menu .left-menu-nav li a{
+ 	color: var(--light-grey);
+ 	padding: 0.4rem;
+
+}
+.left-menu-nav a.active{
+	background: var(--light-grey);
+	color: white !important;
+	display: flex;
+	width: 100%;
+}
+
+.left-menu a, .left-menu p, .left-menu{
+	color: #cae0e3 !important;
+}

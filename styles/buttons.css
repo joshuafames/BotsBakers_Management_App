@@ -1,0 +1,40 @@
+
+.btn {
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input.btn.disabled {
+	background: #c7c7c7;
+    color: #000;
+}
+
+.submit-btn {
+	background: #8dff8d;
+    color: #005403;
+}
+.submit-btn:hover {
+	background: green;
+    color: #fff;
+}
+.cancel-btn {
+	background-color: #ff9898;
+    color: #890000;
+}
+.cancel-btn:hover {
+	background-color: red;
+    color: #fff;
+}
+
+
+.btn-primary {
+	background: var(--accent) !important;
+	border: none;
+	color: #000;
+	transition: ease-in-out .5s background;
+}
+
+
+.btn-primary:hover{
+	background: #c58715 !important;
+}
+

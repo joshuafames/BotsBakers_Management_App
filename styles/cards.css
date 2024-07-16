@@ -1,0 +1,111 @@
+.quickViewCards .card.card-btn:hover {
+    background: aliceblue;
+}
+
+.quickViewCards .card.card-btn:hover p, .quickViewCards .card.card-btn:hover i, .quickViewCards .card.card-btn:hover span {
+	color: var(--secondary) !important;
+}
+
+.quickViewCards .card.card-btn {
+	cursor: pointer;
+	transition: .3s ease-in-out background;
+}
+
+.quickViewCards .card, .cards-row .card {
+	justify-content: space-between;
+	padding: 1rem;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.quickViewCards .card .info-area .card-name, .quickViewCards .card .info-area h4, .quickViewCards .card .icon-area i{
+	color: var(--secondary);
+}
+
+.quickViewCards .card.card-btn .info-area .card-name, .quickViewCards .card.card-btn .info-area h4, .quickViewCards .card.card-btn .icon-area i{
+	color: #fff;
+}
+
+.quickViewCards .card:nth-child(1) .info-area .card-name, .quickViewCards .card:nth-child(1) .info-area h4, .quickViewCards .card:nth-child(1) .icon-area i{
+	color: #fff;
+}
+
+.quickViewCards .card:nth-child(1), .quickViewCards .card-btn {
+	background: var(--secondary);
+	color: #fff;
+}
+
+.quickViewCards .card:nth-child(1) .greytext, .quickViewCards .card:nth-child(1) .hanging-description, .quickViewCards .card.card-btn .greytext, .quickViewCards .card.card-btn .hanging-description {
+	color: #cae0e3 !important;
+}
+
+.quickViewCards .card .icon-area {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.quickViewCards .card .card-title, .card-name {
+	font-family: norm-medium;
+}
+
+.cards-row.colored .card {
+	background: var(--secondary);
+}
+
+.cards-row.colored .card p, .cards-row.colored .card i, .cards-row.colored .card span{
+	color: #fff;
+}
+
+.cards-row.client-info i{
+	font-size: 1.5rem;
+}
+
+.quickOrderCards .description-header .hanging-description{
+	font-size: 12px;
+	margin-bottom: 0.25rem;
+}
+
+
+.quickOrderCards .card{
+	position: relative;
+	width: 12rem;
+    height: 10rem;
+    padding: 1rem;
+    background: var(--accent-light);
+    border:  #efe4bc 1px solid;
+    border-radius: 0.7rem;;
+}
+
+.quickOrderCards .card input {
+	width: 2.5rem !important;
+	border: none;
+	padding: 0;
+	text-align: center;
+	background: var(--accent-light);
+}
+
+.quickOrderCards .card .action-button-area{
+	justify-content: end;
+}
+
+.quickOrderCards .card::before{
+	content: '';
+    position: absolute;
+    width: 0.4rem;
+    height: 10rem;
+    background: var(--accent);
+    z-index: 1;
+    top: 0;
+    border-top-left-radius: 20px;
+    left: 0;
+    border-bottom-left-radius: 20px;
+}
+
+.quickOrderCards .card.tab-selector{
+	background-color: #efe4bc;
+}
+
+.quickOrderCards .card.tab-selector::before{
+	width: 0;
+	height: 0;
+}

@@ -1,0 +1,47 @@
+:root{
+	--primary: #008194;
+	--secondary: #005361;
+	--accent: #f6d047;
+	--accent-light: #fbf6e2;
+	--accent-border: #fff2c1;
+    --grey-text: #444;
+	--light-grey: #666;
+	--dark-grey: #444;
+	--border-grey: #d9d9d9;
+}
+
+@font-face {
+	font-family: norm;
+	src: url('../fonts/Google-sans-Font-Family/ProductSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: norm-bold;
+	src: url('../fonts/Google-sans-Font-Family/ProductSans-Black.ttf');
+}
+@font-face {
+	font-family: norm-medium;
+	src: url('../fonts/Google-sans-Font-Family/ProductSans-Medium.ttf');
+}
+
+body {
+	font-family: norm;
+	color: var(--grey-text);
+}
+
+h1,h2, .font-bold{
+	font-family: norm-bold;
+}
+
+h3,h4, .font-medium {
+	font-family: norm-medium;
+}
+
+
+a {
+	text-decoration: none !important;
+}
+
+ul {
+	list-style: none;
+}

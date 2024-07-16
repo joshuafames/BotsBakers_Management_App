@@ -1,0 +1,33 @@
+.snackbar {
+    width: 250px;
+    background-color: #ffbc26;
+    color: #1c1c1c;
+    position: fixed;
+    z-index: 10;
+    bottom: 0.8rem;
+    border-radius: 0.3rem;
+    left: 0.8rem;
+    opacity: 0;
+    transition: .5s ease-in-out opacity;
+    padding: 0.5rem 1rem;
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 22%);
+}
+
+.snackbar .title-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.snackbar .title-area h4 {
+    line-height: 1.5rem;
+}
+
+.snackbar .icon-area {
+    font-size: 2.5rem;
+}
+
+.visible {
+    opacity: 1;
+}

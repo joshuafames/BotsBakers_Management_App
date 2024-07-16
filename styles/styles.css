@@ -1,0 +1,453 @@
+@import '../../dist/css/icons/font-awesome/css/fontawesome-all.css';
+@import '../../dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css';
+
+@import './base.css';
+@import './snackbar.css';
+@import './table.css';
+@import './cards.css';
+@import './buttons.css';
+@import './left-menu.css';
+@import './custom-utils.css';
+
+.hide{
+	display: none !important;
+}
+
+.main-body .btn:focus, .main-body .btn-primary:focus, .main-body button:focus{
+	border: none !important;
+	box-shadow: 0 0 0 0.25rem rgb(255 246 215);
+}
+
+.height-10 {
+	height: 10rem;
+}
+
+.hanging-description{
+	color: var(--light-grey);
+	font-size: 14px;
+}
+
+.left-menu{
+	display: block;
+	position: fixed;
+	width: 20%;
+	height: 100%;
+}
+
+.greytext, .primary-grey{
+	color: var(--dark-grey) !important;
+}
+
+.main-body {
+	width: 80%;
+	margin-left: 20%;
+}
+.action-bar button {
+	padding: 0.3rem 0.8rem;
+}
+
+.pending {
+	color: red !important;
+	font-weight: bold;
+}
+
+.dashboard .left-menu li a.active{
+	color: #fff !important;
+}
+
+.clients .single-table-row{
+	cursor: pointer;
+	transition: background ease-in-out .5s;
+}
+
+.clients .single-table-row:hover{
+	background: #f0f8ff66;
+}
+
+
+span.status-paid {
+    background: #c8ffcf;
+    color: green;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+}
+span.status-pending {
+    background: #fffbc8;
+    color: #b50909;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.dashboard .dashboard-item span.status-paid, .dashboard .dashboard-item span.status-pending{
+	padding: 0;
+	background: none;
+}
+
+.dashboard .dashboard-item span.status-pending{
+	color: #ffd400;
+}
+
+.dashboard .dashboard-item .single-table-row{
+	color: var(--light-grey);
+}
+
+.dashboard .dashboard-item .table-type2 .table-head-row{
+	background: #008194;
+    color: #fff;
+}
+
+
+
+/* 
+.header-sec {
+	justify-content: space-between;
+} */
+
+.breadcrum .back-button {
+	display: block;
+    font-size: 1rem;
+    color: #444;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #444;
+    line-height: 1.5rem;
+    border-radius: 50%;
+    padding-left: 0.15rem;
+    margin: 0.5rem;
+}
+
+.bottom-divider{
+	border-bottom: 1px solid #999;
+}
+
+.header-sec form.search input {
+    background: #efe4bc;
+    border: none;
+    padding: 0.4rem 1rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.header-sec form.search input::placeholder{
+	color: var(--light-grey);
+}
+
+.bill-header, .modal .items .item {
+	--bs-gutter-x: 0 !important;
+}
+
+.modal select {
+	cursor: pointer;
+	width: 10rem;
+}
+
+.justify-end{
+	justify-content: end;
+}
+
+.d-flex-y-center{
+	display: flex;
+	align-items: center;
+}
+
+.bill-header::after, .modal .items .item::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #eee;
+}
+
+.bill-header::after {
+	background: var(--dark-grey);
+	height: 2px;
+}
+
+p {
+	margin-bottom: 0 !important;
+}
+
+
+.add-line {
+	border: 1px dashed var(--dark-grey);
+}
+
+.p-rel {
+	position: relative;
+}
+
+.totals{
+	width: 60%;
+	margin-left: 40%;
+}
+
+.subtotal-area p , .total-area p{
+	display: flex;
+	justify-content: space-between;
+}
+
+.right-side::after{
+	content: '';
+	width: 2px;
+	background: #eee;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 10%;
+}
+
+.modal-header-dark {
+	background: var(--dark-grey);
+	border-top-left-radius: 1.4rem;
+	border-top-right-radius: 1.4rem;
+}
+
+.w-5rem {
+	width: 5rem;
+}
+
+.modal .form-control, .modal .right-side .bill-to textarea {
+	border: none;
+}
+
+.modal .form-control:hover, .modal .right-side .bill-to textarea:hover {
+	border: 1px solid #ced4da;
+}
+
+.modal .right-side .bill-to input, .modal .right-side .bill-to textarea {
+    text-align: right;
+    padding: 0;
+    width: 10rem;
+    margin-left: auto;
+}
+
+input.nobtns::-webkit-outer-spin-button, input.nobtns::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input.nobtns:hover{
+	border: none;
+}
+input#invoice-total, input#paidOffAmount{
+	width: 5rem;
+	height: min-content;
+	border: none;
+}
+#success-modal .icon-area{
+	border-radius: 50%;
+    padding: 2rem;
+    background: #d1ffc9;
+    color: #009d1b;
+}
+#success-modal .modal-header{
+	flex-direction: column;
+	border: none;
+}
+
+#success-modal .modal-body, #success-modal .modal-footer{
+	border: none;
+}
+
+#success-modal .modal-footer{
+	justify-content: center;
+}
+
+#success-modal .modal-footer button{
+	background: #009d1b;
+    color: #fff;
+    width: 80%;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.single-table-row .col-1{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-table-row .col-1 i{
+	position: relative;
+	line-height: 1.8rem;
+}
+
+.single-table-row .col-1 i::before{
+	margin-left: 8px;
+}
+
+
+.dashboard .container.main-body {
+	background: #f5f5f9;
+}
+
+.left-menu{
+	background: var(--secondary);
+}
+
+.dashboard-item {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+	margin-bottom: 1rem;
+	box-shadow: 6px 6px 6px rgb(0 0 0 / 5%);
+}
+
+.d-flex-space-between{
+	display: flex ;
+	justify-content: space-between !important;
+}
+
+.dashboard-item span.icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    display: block;
+    background: var(--secondary);
+    padding: 9px;
+    padding-top: 7px;
+    color: #fff;
+}
+
+/* NO DARK MODE ALTERNATE YET*/
+
+.w-text-blend{
+	width: 2.5rem;
+	border: none;
+	background-color: inherit;
+}
+
+.justify-space-between{
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.simple-border{
+	border:1px solid var(--light-grey);
+}
+
+.dashed-bottom-divider{
+	border-bottom: 1px dashed var(--light-grey);
+}
+
+.reciept-design .btn{
+	width: 31%;
+    height: 3rem;
+	border-radius: 7px;
+}
+
+.reciept-design{
+	flex-direction: column;
+	margin-top: 1.5rem;
+	padding: 1.5rem;
+    border-radius: 0.8rem;
+    background: var(--accent-light);
+}
+
+#card-order-qty-less, #card-order-qty-more{
+	padding: 0 !important;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid var(--border-grey) !important;
+}
+
+#no-items-yet {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+
+.reciept-footer-bottom .options .btn.selected{
+	background: #f6d047;
+    border: #fff;
+}
+
+.easein {
+	transition: 0.3s ease;
+}
+
+#place-bill.disabled {
+	background: var(--light-grey) !important;
+}
+
+.circle-red, .circle-yellow{
+	display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.circle-yellow{
+	position: absolute;
+	background: #ffd60eb5;
+	top: 0;
+	left: -24px;
+}
+.circle-red {
+	background: rgb(196, 47, 47);
+}
+
+.error-message {
+	color: #b50909 !important;
+}
+
+.graph-section .graph-info p span{
+	background: var(--dark-grey);
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-right: 0.25rem;
+    justify-content: center;
+}
+
+.graph-section .graph-info p{
+	width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.graph-section .graph-info {
+	width: fit-content;
+    position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.7rem;
+}
+
+.tab {
+	visibility: hidden;
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+	position: absolute;
+}
+.tab.active{
+	visibility: visible;
+	opacity: 1;
+	position: relative;
+}
+
+.container section.col-6{
+	padding: 0 1rem;
+}
+
+#record-daily-sales .col i {
+	font-size: 3rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+#record-daily-sales input {
+	padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+#record-daily-sales .modal-body .col {
+	padding: 2rem 0;
+}
