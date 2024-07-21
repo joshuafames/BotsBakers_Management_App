@@ -5,10 +5,10 @@ ini_set('display_errors', 1);
 include('../../classes/DB.php');
 include('../../classes/Login.php');
 
+ini_set('max_execution_time', 500);
+
 // Load the phpspreadsheet library
 require '../../../../phpspreadsheet/vendor/autoload.php';
-// require '../../../vendor/dompdf/autoload.inc.php';
-
 
 //NEW INVOICE ID:
 $previnvnumber = DB::query('SELECT MAX(id) AS `col` FROM `invoices`')[0]['col']+1;
@@ -86,11 +86,18 @@ for ($i=0; $i < count($products); $i++) {
 // Save the modified Excel file
 $writer = PhpOffice\PhpSpreadsheet\IOFactory::createWriter($template, 'Xlsx');
 $writer->save($filenamei.'.xlsx');
-// echo "NEW EXCEL FILE NAMED ".$filenamei.' was created';
 
-// $pdfFilePath = 'edited-invoice.pdf';
-// $pdfWriter = PhpOffice\PhpSpreadsheet\IOFactory::createWriter($template, 'Dompdf');
-// $pdfWriter->save($pdfFilePath);
+$excelFilePath = $filenamei.'.xlsx';
+$pdfFilePath = $filenamei.'.pdf';
+
+// Command to call the Python script
+$command = escapeshellcmd("python excel2pdf.py $excelFilePath $pdfFilePath");
+
+// Execute the command
+$output = shell_exec($command);
+
+// // Output the result
+// echo "<pre>$output</pre> jj";
 
 echo("200");
 ?>

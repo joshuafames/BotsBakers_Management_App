@@ -24,8 +24,8 @@
 	src: url('../fonts/Google-sans-Font-Family/ProductSans-Medium.ttf');
 }
 
-body {
-	font-family: norm;
+body, p, a, select, input {
+	font-family: norm !important;
 	color: var(--grey-text);
 }
 

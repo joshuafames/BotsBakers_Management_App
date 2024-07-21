@@ -1,16 +1,32 @@
 .snackbar {
-    width: 250px;
-    background-color: #ffbc26;
+    width: 20rem;
     color: #1c1c1c;
     position: fixed;
     z-index: 10;
     bottom: 0.8rem;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     left: 0.8rem;
     opacity: 0;
     transition: .5s ease-in-out opacity;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     box-shadow: 6px 6px 6px rgb(0 0 0 / 22%);
+}
+
+#snack-bar-title {
+    font-size: 1rem !important;
+}
+#snack-bar-body {
+    font-size: 0.9rem;
+}
+
+.snackbar .icon-area i {
+    padding: .2rem;
+    border-radius: 50%;
+    width: 2rem;
+    display: block;
+    color: #fff;
+    height: 2rem;
+    line-height: 1.7rem;
 }
 
 .snackbar .title-area {
@@ -20,14 +36,35 @@
 
 }
 
-.snackbar .title-area h4 {
-    line-height: 1.5rem;
-}
 
 .snackbar .icon-area {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.snackbar .icon-area i::before{
+    margin-left: 0.05rem;
 }
 
 .visible {
     opacity: 1;
+}
+
+/* Types of SNACKBARS */
+.snackbar.info {
+    background-color: #e9feff;
+    border: 2px solid #7183ff;
+}
+
+.snackbar.info .icon-area i {
+    background: #7183ff;
+    box-shadow: 6px 6px 6px rgba(78, 46, 255, 0.22);
+}
+.snackbar.error {
+    background-color: #ffe0eaff;
+    border: 2px solid #ff4343;
+}
+
+.snackbar.error .icon-area i {
+    background: #ff4343;
+    box-shadow: 6px 6px 6px rgb(255 22 22 / 22%);
 }

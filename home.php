@@ -1,10 +1,6 @@
 <?php
     include('classes/DB.php');
     include('classes/Login.php');
-    include('classes/Post.php');
-    include('classes/Notify.php');
-    include('classes/Image.php');
-    include('classes/Comment.php');
 
     $showTimeline = False;
     if (Login::isLoggedIn()) {

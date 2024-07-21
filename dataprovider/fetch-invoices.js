@@ -26,7 +26,7 @@ export function getInvoices(client="") {
             `;
         });
         document.getElementById('invoice-list').innerHTML = output;
-        // document.getElementById('inv_balance').innerText += inv_balance;
+        // document.getElementById('inv_balance').innerHTML += inv_balance;
     })
     .catch(err => console.log(err))
 }
