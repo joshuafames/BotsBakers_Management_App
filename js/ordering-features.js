@@ -227,20 +227,6 @@ window.incrementValue = incrementValue;
 window.decrementValue = decrementValue;
 
 
-/////
-
-var selectedOption;
-
-function qopSelect(lmnt){    
-    if(selectedOption != undefined){
-        $("#"+selectedOption).removeClass("selected");
-        document.querySelector('[data-qopm='+selectedOption.slice(4)+']').checked = false;
-    }
-    document.querySelector('[data-qopm='+lmnt.dataset.qop+']').checked = true;
-    $("#"+lmnt.id).addClass("selected");
-    selectedOption = lmnt.id;
-};
-
 function getOrderSummary() {
     fetch('./api/orders')
     .then(response => response.json())

@@ -184,7 +184,7 @@
 
                 <div class="reciept-footer-bottom">
                     <p class="hanging-description mb-2" id="qop-title">Payment Option <span id="error-icon" class="hide"><i class="fa-regular fa-warning"></i></span></p>
-                    <div class="d-flex justify-content-center options">
+                    <div class="d-flex justify-space-between options">
                         <input type="checkbox" name="paidby" value="Card" id="qopm-card" data-qopm="card" hidden>
                         <input type="checkbox" name="paidby" value="Cash" id="qopm-cash" data-qopm="cash" hidden>
                         <input type="checkbox" name="paidby" value="Invoice" id="qopm-invoice" data-qopm="invoice" hidden>
@@ -281,12 +281,15 @@
     </div>
 </body>
 <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 <script type="module" src="./js/ordering-features.js"></script>
 <script type="text/javascript" src="./js/getProds.js"></script>
 <script type="text/javascript" src="./dataprovider/post-daily-sales.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
+        //Set Aside Nav Menu Active Button
+        const asideNavActiveBtn = document.querySelector("#link-to-orders");
+        asideNavActiveBtn.classList.add("active"); 
     
         $(".btn.simple-border").click(function(e){
             e.preventDefault();
@@ -295,7 +298,22 @@
             setTimeout(() => {
                 location.reload();
             }, 800);
-        })
+        });
+
+
+        /// POS SECTION FUNCTIONALITY
+        var selectedOption;
+
+        function qopSelect(lmnt){
+            if(selectedOption != undefined){
+                $("#"+selectedOption).removeClass("selected");
+                document.querySelector('[data-qopm='+selectedOption.slice(4)+']').checked = false;
+            }
+            document.querySelector('[data-qopm='+lmnt.dataset.qop+']').checked = true;
+            $("#"+lmnt.id).addClass("selected");
+            selectedOption = lmnt.id;
+        };
+        window.qopSelect = qopSelect;
 
         $("#quickOrder").submit(function(e){
             e.preventDefault();

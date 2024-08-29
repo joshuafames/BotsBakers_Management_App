@@ -22,22 +22,20 @@
 	color: var(--secondary);
 }
 
-.quickViewCards .card.card-btn .info-area .card-name, .quickViewCards .card.card-btn .info-area h4, .quickViewCards .card.card-btn .icon-area i{
-	color: #fff;
-}
-
-.quickViewCards .card:nth-child(1) .info-area .card-name, .quickViewCards .card:nth-child(1) .info-area h4, .quickViewCards .card:nth-child(1) .icon-area i{
-	color: #fff;
+.quickViewCards .card.card-btn .info-area .card-name, .quickViewCards .card.card-btn .info-area h4, .quickViewCards .card.card-btn .icon-area i,
+.quickViewCards .card:nth-child(1) .info-area .card-name, .quickViewCards .card:nth-child(1) .info-area h4, .quickViewCards .card:nth-child(1) .icon-area i,
+.cards-row.colored .card p, .cards-row.colored .card i, .cards-row.colored .card span
+{
+	color: var(--dark-grey);
 }
 
 .quickViewCards .card:nth-child(1), .quickViewCards .card-btn {
-	background: var(--secondary);
-	color: #fff;
+	background: var(--accent-light);
 }
 
-.quickViewCards .card:nth-child(1) .greytext, .quickViewCards .card:nth-child(1) .hanging-description, .quickViewCards .card.card-btn .greytext, .quickViewCards .card.card-btn .hanging-description {
+/* .quickViewCards .card:nth-child(1) .greytext, .quickViewCards .card:nth-child(1) .hanging-description, .quickViewCards .card.card-btn .greytext, .quickViewCards .card.card-btn .hanging-description {
 	color: #cae0e3 !important;
-}
+} */
 
 .quickViewCards .card .icon-area {
 	font-size: 2rem;
@@ -49,12 +47,13 @@
 }
 
 .cards-row.colored .card {
-	background: var(--secondary);
+	background: var(--accent-light);
+	border: none;
 }
-
+/* 
 .cards-row.colored .card p, .cards-row.colored .card i, .cards-row.colored .card span{
 	color: #fff;
-}
+} */
 
 .cards-row.client-info i{
 	font-size: 1.5rem;

@@ -174,10 +174,20 @@ include('head.php');
 <script type="module" src="./dataprovider/fetch-clients.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
+        //Set Aside Nav Menu Active Button
+        const asideNavActiveBtn = document.querySelector("#link-to-invoices");
+        asideNavActiveBtn.classList.add("active"); 
+
         //load invoices
         getInvoices();
         //load clients
-        getClients();
+        getClients("", () => {
+            const linksToSingleClient = document.querySelectorAll(".single-client-table-row");
+            linksToSingleClient.forEach(element => {
+                element.attributes['href'].nodeValue += "&&prev=invoices";
+            });
+            console.log(linksToSingleClient);
+        });
         //Create New Invoice
         $('#addinvoice').submit(function(e){
             e.preventDefault();

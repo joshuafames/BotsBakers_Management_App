@@ -1,11 +1,8 @@
 <?php
     include('classes/DB.php');
     include('classes/Login.php');
-
-    $showTimeline = False;
     if (Login::isLoggedIn()) {
             $userid = Login::isLoggedIn();
-            $showTimeline = True;
 
             $myusername = DB::query('SELECT username FROM users WHERE id=:userid', array(':userid'=>Login::isLoggedIn()))['0']['username'];
             
@@ -25,52 +22,20 @@
             }
     }else{
         header('Location: ./login.php');
-
     }
 ?>
 
 <html>
-<head>
-    <title>BotsBakers - Invoices</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-    <link href="../dist/css/icons/fontawesome6/css/fontawesome.css" rel="stylesheet">
-    <link href="../dist/css/icons/fontawesome6/css/brands.css" rel="stylesheet">
-    <link href="../dist/css/icons/fontawesome6/css/solid.css" rel="stylesheet">
-    <?php
-    if(isset($_GET['mode'])){
-        if($_GET['mode']== "dark"){
-            echo'<link rel="stylesheet" type="text/css" href="./styles/darkModeStyles.css">';
-        }else{
-            echo'<link rel="stylesheet" type="text/css" href="./styles/styles.css">';
-        }
-    }else{
-        echo'<link rel="stylesheet" type="text/css" href="./styles/styles.css">';
-    }
+    <?php 
+        include('head.php');
     ?>
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-</head>
 <body id="element-to-print" class="dashboard">
-    <div class="left-menu">
-        <h2 class="p-4 pb-0 text-white">BotsBakers</h2>
-        <p class="hanging-description px-4 pb-4 primary-grey">Admin & Management System</p>
-        <ul class="left-menu-nav px-4">
-            <li><a class="btn active" href="dashboard.php"><i class="mdi mdi-chart-line me-3"></i> Dashboard</a></li>
-            <li><a class="btn" href="./orders.php"><i class="mdi me-3 mdi-cart"></i> Orders</a></li>
-            <li><a class="btn" href="./invoicepage.php"><i class="mdi me-3 mdi-cash-multiple"></i> Invoices</a></li>
-            <li><a class="btn" href="./debts.php"><i class="mdi me-3 mdi-receipt"></i> Debts</a></li>
-            <li><a class="btn" href="./expenses.php"><i class="mdi me-3 mdi-receipt"></i> Expenses</a></li>
-            <li class="bottom-divider"><a class="btn" href="#"><i class="mdi me-3 mdi-account-card-details"></i> Human Resourses</a></li>
-            <li><a class="btn" href="#"><i class="fa me-3 fa-cog"></i> System Settings</a></li>
-        </ul>
-    </div>
+    <?php include('./components/left-menu.php'); ?>
     <div class="container main-body p-4" style="padding-left:2rem !important;">
-        <div class="header-sec mb-4 d-flex">
-            <p class="fs-3">Welcome Back, <?php echo($myusername); ?></p>
-            <form class="search my-auto">
-                <input type="text" name="Search" placeholder="Search">
-            </form>
+        <div class="header-sec d-flex">
+            <h1 class="mb-0">Welcome Back, <?php echo($myusername); ?></h1>
         </div>
+        <p class="hanging-description mb-4">Manage Your Business & Your Employees At One Place</p>
 
         <div class="row">
             <div class="col-6">
@@ -118,43 +83,6 @@
                 
             </div>
         </div>
-
-        <!-- <div class="row pt-1">
-            <div class="col-5">
-                <div class="dashboard-item back-card">
-                    <div class="backcard-header mt-1 d-flex-space-between">
-                        <p>Potential Balance</p>
-                        <div class="masterCard p-rel">
-                            <div class="circle-red"></div>
-                            <dic class="circle-yellow"></dic>
-                        </div>
-                    </div>
-                    <h3 class="mt-3">R<?php echo($duebalance);?></h3>
-                    <div class="account-number-section my-3 d-flex font-medium" style="letter-spacing:5px;">
-                        <p class="mr-3">****</p>
-                        <p class="mr-3">****</p>
-                        <p class="mr-3">****</p>
-                        <p>6380</p>
-                    </div>
-                    <p>01/12</p>
-                </div>
-            </div>
-            <div class="col-7">
-                <div class="dashboard-item no-bg pb-1">
-                    <div class="table-type2 container mb-4">
-                        <div class="table-head-row row">
-                            <div class="col-2">Invoice</div>
-                            <div class="col-3">Date</div>
-                            <div class="col-3">Client</div>
-                            <div class="col-2">Amount</div>
-                            <div class="col-2">Status</div>
-                        </div>
-                        <div id="invoice-list">
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div> -->
 
         <div class="row pt-1">
             <div class="col">
@@ -344,6 +272,10 @@
 
     
     metricGet();
+
+    //Set Aside Nav Menu Active Button
+    const asideNavActiveBtn = document.querySelector("#link-to-dashboard");
+        asideNavActiveBtn.classList.add("active");
 
     var ctx = document.getElementById('pie-chart').getContext('2d');
     var gfb = document.getElementById('rev-graph').getContext('2d');

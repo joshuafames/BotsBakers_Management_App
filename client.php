@@ -18,6 +18,11 @@
             if(!$client_rep) {
                 $client_rep = "None";
             }
+            $prevPage = "unset";
+
+            if(isset($_GET['prev'])){
+                $prevPage = $_GET['prev'];
+            }
     }else{
         header('Location: ./login.php');
     }
@@ -30,12 +35,14 @@ include('head.php');
 <body id="element-to-print">
     <?php include('./components/left-menu.php'); ?>
     <div class="container row main-body p-4">
-        <section class="col-6">
-            <section class="breadcrum d-flex align-items-center">
-                <a class="back-button" href="./invoices.php"><i class="mdi mdi-arrow-left"></i></a>
-                <p class="hanging-description">Invoices > Client</p>
-            </section>
-            
+
+        <section class="col-12 breadcrum d-flex align-items-center">
+            <a class="back-button" href="./<?php echo $prevPage; ?>.php">
+                <i class="mdi mdi-arrow-left"></i>
+            </a>
+            <p class="hanging-description"><?php echo $prevPage; ?> > Client</p>
+        </section>
+        <section class="col-6">            
             <section class="header-sec mt-2">
                 <h1><?php echo($_GET['client']); ?></h1>
                 <article class="cards-row colored client-info d-flex">
@@ -143,6 +150,10 @@ include('head.php');
 <script type="text/javascript" src="./features/create-invoice.js"></script>
 <script type="module">
     $(document).ready( function() {
+        
+        //Set Aside Nav Menu Active Button
+        const asideNavActiveBtn = document.querySelector("#link-to-clients");
+        asideNavActiveBtn.classList.add("active"); 
 
         //AUTO FILL CLIENT INFO ON INVOICE
         getInvoices(window.location.search);

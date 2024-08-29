@@ -7,6 +7,7 @@
 @import './cards.css';
 @import './buttons.css';
 @import './left-menu.css';
+@import './dashboard.css';
 @import './custom-utils.css';
 
 .hide{
@@ -77,25 +78,6 @@ span.status-pending {
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
-
-.dashboard .dashboard-item span.status-paid, .dashboard .dashboard-item span.status-pending{
-	padding: 0;
-	background: none;
-}
-
-.dashboard .dashboard-item span.status-pending{
-	color: #ffd400;
-}
-
-.dashboard .dashboard-item .single-table-row{
-	color: var(--light-grey);
-}
-
-.dashboard .dashboard-item .table-type2 .table-head-row{
-	background: #008194;
-    color: #fff;
-}
-
 
 
 /* 
@@ -276,22 +258,10 @@ input#invoice-total, input#paidOffAmount{
 	margin-left: 8px;
 }
 
-
-.dashboard .container.main-body {
-	background: #f5f5f9;
-}
-
 .left-menu{
 	background: var(--secondary);
 }
 
-.dashboard-item {
-    background: #fff;
-    border-radius: 20px;
-    padding: 1.5rem;
-	margin-bottom: 1rem;
-	box-shadow: 6px 6px 6px rgb(0 0 0 / 5%);
-}
 
 .d-flex-space-between{
 	display: flex ;

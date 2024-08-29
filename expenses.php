@@ -4,20 +4,9 @@
 
     $showTimeline = False;
     if (Login::isLoggedIn()) {
-            $userid = Login::isLoggedIn();
-            $showTimeline = True;
 
             $myusername = DB::query('SELECT username FROM users WHERE id=:userid', array(':userid'=>Login::isLoggedIn()))['0']['username'];
             
-            $previnvnumber = DB::query('SELECT MAX(id) AS `col` FROM `invoices`')[0]['col']+1;
-            $newinvoicenumber = "INV".$previnvnumber;
-
-            $dueArray = DB::query('SELECT Amount FROM invoices');
-            $duebalance = 0;
-            foreach($dueArray as $bal){
-                $duebalance = $duebalance + $bal['Amount'];
-            }
-            $duebalance = number_format($duebalance, 2, '.', '');
     }else{
         header('Location: ./login.php');
 
