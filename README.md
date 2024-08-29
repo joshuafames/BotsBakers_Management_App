@@ -23,6 +23,7 @@ This is a comprehensive business management application built using the LAMP sta
 - **Python**: Ensure Python is installed on your machine.
 - **LAMP Server**: A local LAMP server such as XAMPP is required to run the application.
 - **MySQL Database**: Import the provided database dump located in the backend folder.
+- **PHPspreadsheet**: For editing the excel invoice template.
 
 ### Running the Application
 
