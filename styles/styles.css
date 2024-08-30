@@ -1,5 +1,5 @@
-@import '../../dist/css/icons/font-awesome/css/fontawesome-all.css';
-@import '../../dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css';
+@import '../external-assets/dist/css/icons/font-awesome/css/fontawesome-all.css';
+@import '../external-assets/dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css';
 
 @import './base.css';
 @import './snackbar.css';

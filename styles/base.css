@@ -12,16 +12,16 @@
 
 @font-face {
 	font-family: norm;
-	src: url('../fonts/Google-sans-Font-Family/ProductSans-Regular.ttf');
+	src: url('./fonts/Google-sans-Font-Family/ProductSans-Regular.ttf');
 }
 
 @font-face {
 	font-family: norm-bold;
-	src: url('../fonts/Google-sans-Font-Family/ProductSans-Black.ttf');
+	src: url('./fonts/Google-sans-Font-Family/ProductSans-Black.ttf');
 }
 @font-face {
 	font-family: norm-medium;
-	src: url('../fonts/Google-sans-Font-Family/ProductSans-Medium.ttf');
+	src: url('./fonts/Google-sans-Font-Family/ProductSans-Medium.ttf');
 }
 
 body, p, a, select, input {

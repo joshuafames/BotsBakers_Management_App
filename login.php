@@ -20,7 +20,7 @@ include('classes/DB.php');
 
 				setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
 				setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
-				header('Location: home.php');
+				header('Location: dashboard.php');
 
 			}else {
 				echo "Incorrect Password";
@@ -46,7 +46,7 @@ include('classes/DB.php');
 
 				setcookie("SNID", $tokenSM, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
 				setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
-				header('Location: indexfeed.php');
+				header('Location: dashboard.php');
 
 			}else {
 				echo "Incorrect Password";

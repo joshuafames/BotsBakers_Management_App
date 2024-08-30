@@ -8,7 +8,7 @@ include('../../classes/Login.php');
 ini_set('max_execution_time', 500);
 
 // Load the phpspreadsheet library
-require '../../../../phpspreadsheet/vendor/autoload.php';
+require '../../external-assets/phpspreadsheet/vendor/autoload.php';
 
 //NEW INVOICE ID:
 $previnvnumber = DB::query('SELECT MAX(id) AS `col` FROM `invoices`')[0]['col']+1;

@@ -1,3 +1,10 @@
 api/
 *.xlsx
 *.pdf
+**/font-awesome/*
+**/fontawesome6/*
+**/material-design-iconic-font/*
+**/themify-icons/*
+**/weather-icons/*
+**/phpspreadsheet/*
+**/ionicons/*
