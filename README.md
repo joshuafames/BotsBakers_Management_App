@@ -41,4 +41,5 @@ This is a comprehensive business management application built using the LAMP sta
 - **Employee Management**: Manage employee timesheets, leave-days, payslip generation.
 
 ## Screenshots of key features
-
+![Screenshot invoice creation](https://github.com/joshuafames/BotsBakers_Management_App/blob/main/screenshots/create-invoice.PNG)
+![Screenshot POS section](https://github.com/joshuafames/BotsBakers_Management_App/blob/main/screenshots/POS-screenshot.PNG)
