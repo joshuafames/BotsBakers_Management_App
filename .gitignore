@@ -1,7 +1,7 @@
 api/
 *.xlsx
 *.pdf
-**/font-awesome/*
+**/fontawesome/*
 **/fontawesome6/*
 **/material-design-iconic-font/*
 **/themify-icons/*

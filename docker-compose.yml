@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  # Apache and PHP service
+  web:
+    image: php:8.1-apache  # Use an official PHP image with Apache
+    container_name: php-apache
+    ports:
+      - "8080:80"  # Expose port 8080 on the host to port 80 on the container
+    volumes:
+      - ./src:/var/www/html  # Mount the 'src' directory to the web server's root
+    networks:
+      - mynetwork
+
+  # MySQL service
+  db:
+    image: mysql:5.7  # Use an official MySQL image
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Set MySQL root password
+      MYSQL_DATABASE: my_database  # Default database
+      MYSQL_USER: user  # Username
+      MYSQL_PASSWORD: password  # User's password
+    volumes:
+      - mysql_data:/var/lib/mysql  # Persist data
+    ports:
+      - "3306:3306"  # Expose MySQL on port 3306
+    networks:
+      - mynetwork
+
+# Volumes for persistent data storage
+volumes:
+  mysql_data:
+
+# Define networks
+networks:
+  mynetwork:
+    driver: bridge

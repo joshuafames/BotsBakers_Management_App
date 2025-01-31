@@ -1,7 +1,9 @@
 <?php
-    $conn = new mysqli("127.0.0.1", "root", "", "botsbakers");
 
-    function db($conn, $query, $params = []){
+class DB {
+    
+    public static function query($query, $params = []){
+        $conn = new mysqli("127.0.0.1", "root", "", "business_management_app");
         $stmt = $conn->prepare($query);
         if($stmt === false) {
             die("Prepare failed: " . $conn->error);
@@ -41,5 +43,6 @@
             return $conn->affected_rows > 0;
         }
     }
+}
 ?>
 

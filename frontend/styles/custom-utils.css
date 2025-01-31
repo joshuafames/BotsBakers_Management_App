@@ -1,0 +1,9 @@
+.text-right {
+    text-align: right !important;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.rounded-lg {
+    border-radius: 0.8rem;
+}

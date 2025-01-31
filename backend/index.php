@@ -1,18 +1,17 @@
 <?php
-    include('header.php');
-    include('db.php');
-    include('get-invoices.php');
-    include('get-clients.php');
-    include('post-client-credit.php');
+    require('./header.php');
+    require('./db.php'); // DEFINES FUNCTION TO CONNECT TO DATABASE
+    require('./routes/index.php');
 
     
-    if(count($result)=== 0){
-        $outp = [];
-    }
-    else{
-        $outp = $result;
-    }
+    // if(!Auth::isLoggedIn()) {
+    //     if($_GET['url'] != "signin" && $_GET['url'] != "login" ) {
+    //         $result = "Unauthenticated User";
+    //     }
+    // }
 
-    
-    include('footer.php');
+    if(isset($result["code"])) {
+        http_response_code($result['code']);
+    }
+    echo json_encode($result);
 ?>

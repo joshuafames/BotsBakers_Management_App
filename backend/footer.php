@@ -1,4 +1,4 @@
 <?php
     //print_r($outp);
-    echo json_encode($outp);
+    echo json_encode($result);
 ?>

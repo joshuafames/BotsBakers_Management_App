@@ -9,6 +9,7 @@
 @import './left-menu.css';
 @import './dashboard.css';
 @import './custom-utils.css';
+@import './orders_page.css';
 
 .hide{
 	display: none !important;
@@ -315,11 +316,14 @@ input#invoice-total, input#paidOffAmount{
     background: var(--accent-light);
 }
 
-#card-order-qty-less, #card-order-qty-more{
+.card-order-qty-less, .card-order-qty-more{
 	padding: 0 !important;
 	width: 2rem;
 	height: 2rem;
 	border: 1px solid var(--border-grey) !important;
+}
+.card-order-qty-less:focus, .card-order-qty-more:focus {
+	background-color: #efe4bc;
 }
 
 #no-items-yet {

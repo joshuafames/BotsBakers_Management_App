@@ -20,16 +20,15 @@ This is a comprehensive business management application built using the LAMP sta
 
 ### Prerequisites
 
-- **Python**: Ensure Python is installed on your machine.
 - **LAMP Server**: A local LAMP server such as XAMPP is required to run the application.
 - **MySQL Database**: Import the provided database dump located in the backend folder.
-- **PHPspreadsheet**: For editing the excel invoice template.
+-**Fontawesome-free-6.7.2**: download fontawesome6.7.2 into external-assets/fontawesome
 
 ### Running the Application
 
 1. Start your LAMP server (e.g., using XAMPP).
 2. Ensure the MySQL database is set up with the provided dump file.
-3. Open your web browser and navigate to `http://localhost/dashboard/`.
+3. Open your web browser and navigate to `http://localhost/Business_Manager_App/frontend/`.
 4. Log in using the following credentials:
    - **Username**: `admin`
    - **Password**: `admin101`

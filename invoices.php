@@ -3,7 +3,7 @@
     include('classes/Login.php');
 
     $showTimeline = False;
-    if (Login::isLoggedIn()) {
+    if (TRUE) {
             $userid = Login::isLoggedIn();
             $showTimeline = True;
 
@@ -192,7 +192,7 @@ include('head.php');
         $('#addinvoice').submit(function(e){
             e.preventDefault();
             $.ajax({
-                url: './documents/invoices/invoiceAction.php',
+                url: './documents/invoices/generateInvoice.php',
                 method: 'post',
                 data: $(this).serialize(),
                 success:function(response){

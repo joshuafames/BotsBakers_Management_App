@@ -1,0 +1,30 @@
+
+.dashboard-item {
+    background: var(--accent-light);
+    border-radius: 20px;
+    padding: 1.5rem;
+	margin-bottom: 1rem;
+	border: 1px solid var(--accent);
+}
+
+.dashboard .container.main-body {
+	background: #fff;
+}
+
+.dashboard .dashboard-item span.status-paid, .dashboard .dashboard-item span.status-pending{
+	padding: 0;
+	background: none;
+}
+
+.dashboard .dashboard-item span.status-pending{
+	color: #ffd400;
+}
+
+.dashboard .dashboard-item .single-table-row{
+	color: var(--light-grey);
+}
+
+.dashboard .dashboard-item .table-type2 .table-head-row{
+	background: #008194;
+    color: #fff;
+}

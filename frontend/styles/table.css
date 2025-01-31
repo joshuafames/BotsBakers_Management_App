@@ -1,0 +1,138 @@
+
+
+.table-nav ul{
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.table-nav ul li{
+	display: inline-block;
+}
+
+.table-nav nav{
+	border-bottom: 2px solid #f5f5f5;
+}
+.table-nav .nav-link, .modal .nav-link {
+	position: relative;
+}
+
+.table-nav .nav-link.active, .modal .nav-link.active {
+	color: var(--light-grey);
+}
+.table-nav .nav-link.active::after, .modal .nav-link.active::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: var(--accent);
+	bottom: -2;
+	left: 0;
+}
+
+.table p {
+	margin-bottom:  0 !important;
+	color: var(--light-grey);
+	text-align: center;
+}
+
+.table .table-head-row{
+	background: aliceblue;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border: 1px solid #d4ebff;
+	border-bottom: none;	
+}
+
+.table .single-table-row {
+	position: relative;
+	background: #fbfffe;
+	border-left: 1px solid #d4ebff;
+	border-right: 1px solid #d4ebff;
+	border-bottom: 2px solid aliceblue;
+}
+
+
+.table .col , .table .col-1, .table .col-2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.table .items p{
+	display: block;
+	width: max-content;
+	border: white 2px solid;
+	height: max-content;
+}
+
+.table .items .brown-bread{
+	background: #ecaa90;
+}
+
+.table .items .white-bread{
+	background: wheat;
+}
+
+.table .items .rolls{
+	background: #c9baff;
+}
+.table .items .softis{
+	background: mediumturquoise;
+}
+
+.table .col-1.priority-high{
+	background: #ff8a8a;
+	color: #fff;
+}
+
+.table .col-1.priority-low {
+	background: #9bf498;
+	color: #fff;
+}
+
+.table-type2{
+	font-family: norm-medium;
+}
+
+.table-head-row.bordered{
+	background: #f5f5f5;
+    border: 1px solid #d7d7d7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.table-type2 .table-head-row{
+	background: aliceblue;
+	border-radius: 10px;
+	color: var(--light-grey);
+}
+
+.table-type2 .single-table-row{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #eee;
+	color: var(--light-grey);
+	font-family: 'norm';
+}
+/* 
+.table-type2 .table-head-row {
+    background: #d7ebed;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid #7dc7cf;
+} */
+
+
+.table-type2 .table-col{
+	padding: 0.5rem;
+	text-align: center;
+	display: block !important;
+}
+
+
+.table-type2 .single-table-row .col:nth-child(5) {
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
